@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UK Driving Theory Test — Comprehensive Study Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+HK:wght@300;400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1a3a5c;
+  --navy-dark: #0f2540;
+  --navy-light: #2c5282;
+  --red: #cc0000;
+  --red-light: #fee2e2;
+  --blue: #0066cc;
+  --blue-light: #dbeafe;
+  --green: #006600;
+  --green-light: #d4edda;
+  --yellow: #f4c430;
+  --yellow-light: #fff8dc;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-500: #6b7280;
+  --gray-700: #374151;
+  --gray-900: #111827;
+  --text: #1f2937;
+  --bg: #ffffff;
+  --sidebar-w: 280px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Layout */
+.layout { display: flex; min-height: 100vh; }
+
+/* Sidebar */
+.sidebar {
+  width: var(--sidebar-w);
+  background: var(--navy-dark);
+  color: white;
+  position: fixed;
+  top: 0; left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 24px 0;
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-header {
+  padding: 0 24px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 16px;
+}
+.sidebar-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  line-height: 1.3;
+}
+.sidebar-subtitle {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  margin-top: 4px;
+  font-family: 'Noto Sans HK', sans-serif;
+}
+
+.nav-list { list-style: none; }
+.nav-item a {
+  display: block;
+  padding: 9px 24px;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 14px;
+  border-left: 3px solid transparent;
+  transition: all 0.2s;
+}
+.nav-item a:hover {
+  background: rgba(255,255,255,0.05);
+  color: white;
+  border-left-color: var(--yellow);
+}
+.nav-item a.active {
+  background: rgba(255,255,255,0.08);
+  color: white;
+  border-left-color: var(--yellow);
+}
+.nav-num {
+  display: inline-block;
+  width: 24px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  font-weight: 600;
+}
+
+/* Main content */
+.main {
+  margin-left: var(--sidebar-w);
+  flex: 1;
+  padding: 48px 56px 80px;
+  max-width: 1100px;
+}
+
+/* Mobile menu button */
+.menu-btn {
+  display: none;
+  position: fixed;
+  top: 16px; right: 16px;
+  z-index: 200;
+  background: var(--navy);
+  color: white;
+  border: none;
+  width: 44px; height: 44px;
+  border-radius: 8px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: white;
+  padding: 48px 40px;
+  border-radius: 16px;
+  margin-bottom: 48px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50px; right: -50px;
+  width: 200px; height: 200px;
+  background: rgba(244,196,48,0.15);
+  border-radius: 50%;
+}
+.hero h1 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  position: relative;
+}
+.hero .zh {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 16px;
+  position: relative;
+}
+.hero p {
+  font-size: 16px;
+  color: rgba(255,255,255,0.9);
+  max-width: 700px;
+  position: relative;
+}
+.hero-stats {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.hero-stat {
+  background: rgba(255,255,255,0.1);
+  padding: 12px 18px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+.hero-stat-num {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--yellow);
+}
+.hero-stat-label {
+  font-size: 12px;
+  color: rgba(255,255,255,0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Section styling */
+section {
+  margin-bottom: 64px;
+  scroll-margin-top: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 8px;
+  padding-bottom: 12px;
+  border-bottom: 3px solid var(--navy);
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+h2 .num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px; height: 38px;
+  background: var(--navy);
+  color: white;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+h2 .zh {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--gray-500);
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--navy-dark);
+  margin: 32px 0 12px;
+}
+h3 .zh {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--gray-500);
+  margin-left: 8px;
+  font-style: italic;
+}
+
+h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 20px 0 8px;
+}
+
+p { margin-bottom: 12px; }
+
+ul, ol { margin: 12px 0 16px 24px; }
+li { margin-bottom: 6px; }
+
+strong { color: var(--navy-dark); font-weight: 600; }
+
+/* Cantonese annotation */
+.zh-note {
+  display: block;
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 14px;
+  color: var(--navy-light);
+  font-style: italic;
+  margin: 4px 0 8px;
+  padding-left: 12px;
+  border-left: 3px solid var(--yellow);
+  font-weight: 400;
+}
+.zh-inline {
+  font-family: 'Noto Sans HK', sans-serif;
+  color: var(--gray-500);
+  font-size: 0.9em;
+  font-style: italic;
+  margin-left: 4px;
+}
+
+/* Callout boxes */
+.callout {
+  padding: 16px 20px;
+  border-radius: 10px;
+  margin: 16px 0;
+  border-left: 5px solid;
+}
+.callout-title {
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.callout-warning {
+  background: var(--red-light);
+  border-color: var(--red);
+}
+.callout-warning .callout-title { color: var(--red); }
+
+.callout-info {
+  background: var(--blue-light);
+  border-color: var(--blue);
+}
+.callout-info .callout-title { color: var(--blue); }
+
+.callout-success {
+  background: var(--green-light);
+  border-color: var(--green);
+}
+.callout-success .callout-title { color: var(--green); }
+
+.callout-key {
+  background: var(--yellow-light);
+  border-color: var(--yellow);
+}
+.callout-key .callout-title { color: #8b6914; }
+
+/* Tables */
+.table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; border: 1px solid var(--gray-200); }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: white;
+}
+th {
+  background: var(--navy);
+  color: white;
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+td {
+  padding: 11px 14px;
+  border-top: 1px solid var(--gray-200);
+}
+tr:nth-child(even) td { background: var(--gray-50); }
+tr:hover td { background: var(--blue-light); }
+
+td.num, th.num { text-align: center; font-variant-numeric: tabular-nums; font-weight: 600; }
+
+/* Sign cards */
+.signs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+.sign-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.sign-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* SVG sign shapes */
+.sign-icon {
+  flex-shrink: 0;
+  width: 56px; height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign-warning svg {
+  width: 60px;
+  height: 54px;
+}
+.sign-prohibition {
+  width: 50px; height: 50px;
+  background: white;
+  border: 5px solid var(--red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--navy-dark);
+}
+.sign-mandatory {
+  width: 50px; height: 50px;
+  background: var(--blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 11px;
+  text-align: center;
+}
+.sign-info-blue {
+  width: 52px; height: 38px;
+  background: var(--blue);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 10px;
+  text-align: center;
+  padding: 4px;
+  border-radius: 2px;
+}
+.sign-info-green {
+  width: 52px; height: 38px;
+  background: var(--green);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 10px;
+  text-align: center;
+  padding: 4px;
+  border-radius: 2px;
+}
+.sign-info-white {
+  width: 52px; height: 38px;
+  background: white;
+  color: var(--navy-dark);
+  border: 2px solid var(--navy-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 10px;
+  text-align: center;
+  padding: 3px;
+  border-radius: 2px;
+}
+.sign-info-yellow {
+  width: 52px; height: 38px;
+  background: var(--yellow);
+  color: var(--navy-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 10px;
+  text-align: center;
+  padding: 4px;
+  border-radius: 2px;
+}
+
+.sign-text {
+  flex: 1;
+  font-size: 13px;
+}
+.sign-text strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+.sign-text .zh-mini {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 12px;
+  color: var(--gray-500);
+  margin-top: 4px;
+  display: block;
+}
+
+/* Fact box */
+.fact-box {
+  background: var(--gray-50);
+  border-radius: 10px;
+  padding: 18px;
+  margin: 16px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+.fact-item {
+  text-align: center;
+}
+.fact-num {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--navy);
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1;
+}
+.fact-label {
+  font-size: 12px;
+  color: var(--gray-700);
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Checklist */
+.checklist {
+  list-style: none;
+  margin-left: 0;
+}
+.checklist li {
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 8px;
+}
+.checklist li::before {
+  content: '✓';
+  position: absolute;
+  left: 0; top: 0;
+  color: var(--green);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.x-list {
+  list-style: none;
+  margin-left: 0;
+}
+.x-list li {
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 8px;
+}
+.x-list li::before {
+  content: '✗';
+  position: absolute;
+  left: 0; top: 0;
+  color: var(--red);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Road marking visuals */
+.marking-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px;
+  background: #2a2a2a;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.marking-strip {
+  height: 40px;
+  flex: 0 0 140px;
+  background: #444;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.marking-desc {
+  flex: 1;
+  color: white;
+  font-size: 14px;
+}
+.marking-desc .zh-mini {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  display: block;
+  margin-top: 2px;
+}
+
+.line-solid-white { position: absolute; top: 18px; left: 0; right: 0; height: 4px; background: white; }
+.line-broken-white {
+  position: absolute; top: 18px; left: 0; right: 0; height: 4px;
+  background: repeating-linear-gradient(to right, white 0 14px, transparent 14px 24px);
+}
+.line-double-yellow { position: absolute; left: 0; right: 0; height: 3px; background: var(--yellow); }
+.line-double-yellow.top { top: 14px; }
+.line-double-yellow.bot { top: 24px; }
+.line-single-yellow { position: absolute; top: 18px; left: 0; right: 0; height: 3px; background: var(--yellow); }
+.line-zigzag {
+  position: absolute; top: 14px; left: 0; right: 0; height: 12px;
+  background: linear-gradient(135deg, white 25%, transparent 25%) -10px 0,
+              linear-gradient(225deg, white 25%, transparent 25%) -10px 0;
+  background-size: 14px 14px;
+}
+
+/* Sign category headers */
+.sign-category {
+  background: var(--gray-100);
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin: 24px 0 12px;
+  font-weight: 600;
+  color: var(--navy);
+  border-left: 5px solid var(--navy);
+}
+.sign-category.red { border-left-color: var(--red); }
+.sign-category.blue { border-left-color: var(--blue); }
+.sign-category.green { border-left-color: var(--green); }
+.sign-category.yellow { border-left-color: var(--yellow); }
+
+/* TOC at top */
+.toc-quick {
+  background: var(--gray-50);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 48px;
+  border: 1px solid var(--gray-200);
+}
+.toc-quick h3 {
+  margin-top: 0;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--gray-700);
+}
+.toc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+.toc-grid a {
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+.toc-grid a:hover { background: var(--blue-light); }
+
+/* Footer */
+footer {
+  margin-top: 80px;
+  padding-top: 32px;
+  border-top: 2px solid var(--gray-200);
+  color: var(--gray-500);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .menu-btn { display: block; }
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); }
+  .main { margin-left: 0; padding: 24px 20px 60px; }
+  .hero { padding: 32px 24px; }
+  .hero h1 { font-size: 28px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 19px; }
+}
+
+/* Print */
+@media print {
+  .sidebar, .menu-btn { display: none; }
+  .main { margin-left: 0; padding: 0; max-width: 100%; }
+  .hero { background: white; color: var(--navy); border: 2px solid var(--navy); page-break-inside: avoid; }
+  .hero h1, .hero p, .hero .zh { color: var(--navy-dark) !important; }
+  section { page-break-inside: avoid; }
+  h2 { page-break-after: avoid; }
+  .callout, .fact-box, table { page-break-inside: avoid; }
+  body { font-size: 12px; }
+  a { color: var(--navy); text-decoration: none; }
+}
+
+/* Smooth scroll highlight */
+:target { animation: highlight 1.5s ease; }
+@keyframes highlight {
+  0% { background-color: var(--yellow-light); }
+  100% { background-color: transparent; }
+}
+
+/* Source citations */
+.source-tag {
+  display: inline-block;
+  background: #f0f4ff;
+  border: 1px solid #c7d2fe;
+  color: #3730a3;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 7px;
+  border-radius: 20px;
+  margin-left: 6px;
+  vertical-align: middle;
+  white-space: nowrap;
+  letter-spacing: 0.2px;
+}
+.source-block {
+  background: #f8fafc;
+  border-left: 3px solid #6366f1;
+  padding: 10px 14px;
+  margin: 14px 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 12px;
+  color: #475569;
+}
+.source-block strong {
+  color: #1e1b4b;
+  font-size: 12px;
+}
+
+/* DVSA Topic Index */
+.dvsa-index {
+  margin: 24px 0;
+  border: 2px solid var(--navy);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.dvsa-index-header {
+  background: var(--navy);
+  color: white;
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.dvsa-index-header .zh {
+  font-family: 'Noto Sans HK', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  opacity: 0.8;
+}
+.dvsa-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0;
+}
+.dvsa-topic-row {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--gray-100);
+  border-right: 1px solid var(--gray-100);
+  gap: 12px;
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.15s;
+}
+.dvsa-topic-row:hover {
+  background: var(--yellow-light);
+}
+.dvsa-topic-num {
+  width: 28px;
+  height: 28px;
+  background: var(--navy);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.dvsa-topic-name {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 600;
+}
+.dvsa-topic-link {
+  font-size: 11px;
+  color: var(--blue);
+  white-space: nowrap;
+}
+.dvsa-topic-row.new-topic .dvsa-topic-num {
+  background: var(--red);
+}
+.dvsa-badge {
+  display: inline-block;
+  background: var(--navy);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-right: 6px;
+  vertical-align: middle;
+  letter-spacing: 0.3px;
+}
+
+/* ===== Mock Test Quiz ===== */
+.quiz-card {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+.quiz-start { text-align: center; }
+.quiz-start p { color: var(--gray-700); max-width: 520px; margin: 0 auto 18px; }
+.quiz-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--navy);
+  color: white;
+  border: none;
+  padding: 13px 28px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, transform 0.1s;
+}
+.quiz-btn:hover { background: var(--navy-light); }
+.quiz-btn:active { transform: translateY(1px); }
+.quiz-btn.secondary { background: var(--gray-100); color: var(--navy); }
+.quiz-btn.secondary:hover { background: var(--gray-200); }
+
+.quiz-progress-wrap { margin-bottom: 20px; }
+.quiz-progress-top {
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 13px; color: var(--gray-500); font-weight: 600; margin-bottom: 8px;
+}
+.quiz-bar { height: 8px; background: var(--gray-200); border-radius: 20px; overflow: hidden; }
+.quiz-bar-fill { height: 100%; background: var(--navy); border-radius: 20px; transition: width 0.3s ease; }
+
+.quiz-qnum {
+  display: inline-block; background: var(--navy-light); color: white;
+  font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
+}
+.quiz-question { font-size: 19px; font-weight: 700; color: var(--navy-dark); line-height: 1.45; margin-bottom: 4px; }
+.quiz-question-zh {
+  font-family: 'Noto Sans HK', sans-serif; font-size: 14px; color: var(--gray-500);
+  font-style: italic; margin-bottom: 18px;
+}
+
+.quiz-options { list-style: none; margin: 0; padding: 0; }
+.quiz-option {
+  display: flex; align-items: flex-start; gap: 12px;
+  border: 2px solid var(--gray-200); border-radius: 10px;
+  padding: 14px 16px; margin-bottom: 10px; cursor: pointer;
+  font-size: 15px; transition: border-color 0.12s, background 0.12s;
+  background: white;
+}
+.quiz-option:hover:not(.disabled) { border-color: var(--navy-light); background: var(--gray-50); }
+.quiz-option.disabled { cursor: default; }
+.quiz-option .quiz-letter {
+  flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--gray-100); color: var(--navy); font-weight: 700; font-size: 13px;
+  display: flex; align-items: center; justify-content: center;
+}
+.quiz-option.correct { border-color: var(--green); background: var(--green-light); }
+.quiz-option.correct .quiz-letter { background: var(--green); color: white; }
+.quiz-option.wrong { border-color: var(--red); background: var(--red-light); }
+.quiz-option.wrong .quiz-letter { background: var(--red); color: white; }
+.quiz-option .quiz-mark { margin-left: auto; font-weight: 700; font-size: 18px; }
+
+.quiz-explain {
+  margin-top: 14px; padding: 14px 16px; border-radius: 10px;
+  background: var(--yellow-light); border-left: 5px solid var(--yellow);
+  font-size: 14px; color: var(--gray-700);
+}
+.quiz-explain strong { color: #8b6914; }
+.quiz-explain .zh-inline { display: block; margin-top: 6px; }
+
+.quiz-actions { margin-top: 20px; display: flex; justify-content: flex-end; gap: 10px; }
+
+.quiz-result { text-align: center; }
+.quiz-score-ring {
+  width: 140px; height: 140px; border-radius: 50%; margin: 8px auto 16px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: white;
+}
+.quiz-score-ring.pass { background: linear-gradient(135deg, var(--green) 0%, #059669 100%); }
+.quiz-score-ring.fail { background: linear-gradient(135deg, var(--red) 0%, #b91c1c 100%); }
+.quiz-score-num { font-size: 40px; font-weight: 800; line-height: 1; font-family: 'JetBrains Mono', monospace; }
+.quiz-score-of { font-size: 13px; opacity: 0.9; margin-top: 2px; }
+.quiz-verdict { font-size: 24px; font-weight: 800; margin-bottom: 4px; }
+.quiz-verdict.pass { color: var(--green); }
+.quiz-verdict.fail { color: var(--red); }
+.quiz-verdict-zh { font-family: 'Noto Sans HK', sans-serif; color: var(--gray-500); margin-bottom: 20px; }
+
+.quiz-review { text-align: left; margin: 24px 0; }
+.quiz-review h4 { color: var(--navy); margin-bottom: 10px; }
+.quiz-review-item {
+  border-left: 4px solid var(--red); background: var(--gray-50);
+  padding: 12px 16px; border-radius: 0 8px 8px 0; margin-bottom: 10px; font-size: 14px;
+}
+.quiz-review-item .rq { font-weight: 700; color: var(--navy-dark); margin-bottom: 6px; }
+.quiz-review-item .ra { color: var(--gray-700); }
+.quiz-review-item .ra .ok { color: var(--green); font-weight: 700; }
+.quiz-review-item .ra .no { color: var(--red); font-weight: 700; text-decoration: line-through; }
+
+@media (max-width: 900px) {
+  .quiz-card { padding: 20px; }
+  .quiz-question { font-size: 17px; }
+}
+</style>
+</head>
+<body>
+
+<button class="menu-btn" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-title">UK Theory Test</div>
+      <div class="sidebar-subtitle">英國駕駛理論試 · 學習指南</div>
+    </div>
+    <ul class="nav-list">
+      <li class="nav-item"><a href="#overview"><span class="nav-num">00</span>Overview</a></li>
+      <li style="padding: 6px 24px 2px; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.4); font-weight: 600;">DVSA Topics</li>
+      <li class="nav-item"><a href="#alertness"><span class="nav-num">D1</span>Alertness 專注力</a></li>
+      <li class="nav-item"><a href="#attitude"><span class="nav-num">D2</span>Attitude 態度</a></li>
+      <li class="nav-item"><a href="#vehicle"><span class="nav-num">D3</span>Safety &amp; Vehicle</a></li>
+      <li class="nav-item"><a href="#weather"><span class="nav-num">D4</span>Safety Margins</a></li>
+      <li class="nav-item"><a href="#hazard"><span class="nav-num">D5</span>Hazard Awareness</a></li>
+      <li class="nav-item"><a href="#vulnerable"><span class="nav-num">D6</span>Vulnerable Users</a></li>
+      <li class="nav-item"><a href="#others"><span class="nav-num">D7</span>Other Vehicles</a></li>
+      <li class="nav-item"><a href="#handling"><span class="nav-num">D8</span>Vehicle Handling</a></li>
+      <li class="nav-item"><a href="#motorway"><span class="nav-num">D9</span>Motorway Rules</a></li>
+      <li class="nav-item"><a href="#rules"><span class="nav-num">D10</span>Rules of Road</a></li>
+      <li class="nav-item"><a href="#signs"><span class="nav-num">D11</span>Road Signs</a></li>
+      <li class="nav-item"><a href="#documents"><span class="nav-num">D12</span>Documents</a></li>
+      <li class="nav-item"><a href="#accidents"><span class="nav-num">D13</span>Accidents</a></li>
+      <li class="nav-item"><a href="#loading"><span class="nav-num">D14</span>Vehicle Loading</a></li>
+      <li class="nav-item"><a href="#environment"><span class="nav-num">D15</span>Environment</a></li>
+      <li style="padding: 6px 24px 2px; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.4); font-weight: 600; margin-top: 4px;">Reference</li>
+      <li class="nav-item"><a href="#speed"><span class="nav-num">R1</span>Speed Limits</a></li>
+      <li class="nav-item"><a href="#stopping"><span class="nav-num">R2</span>Stopping Dist.</a></li>
+      <li class="nav-item"><a href="#alcohol"><span class="nav-num">R3</span>Alcohol &amp; Drugs</a></li>
+      <li class="nav-item"><a href="#mock-test"><span class="nav-num">📝</span>Mock Test 模擬試</a></li>
+      <li class="nav-item"><a href="#test-info"><span class="nav-num">★</span>Test Info</a></li>
+    </ul>
+  </aside>
+
+  <main class="main">
+
+    <!-- HERO -->
+    <div class="hero" id="overview">
+      <h1>UK Driving Theory Test</h1>
+      <div class="zh">英國駕駛理論試 · 完整溫習指南</div>
+      <p>A comprehensive reference guide for the UK (England) driving theory test, covering all 15 topic areas with key facts, tables, and bilingual annotations.</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-num">50</div>
+          <div class="hero-stat-label">Multiple Choice Qs</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">43/50</div>
+          <div class="hero-stat-label">Pass Mark</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">14</div>
+          <div class="hero-stat-label">Hazard Clips</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">44/75</div>
+          <div class="hero-stat-label">Hazard Pass</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">57 min</div>
+          <div class="hero-stat-label">Time Limit</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DVSA TOPIC INDEX -->
+    <div class="dvsa-index">
+      <div class="dvsa-index-header">
+        📋 Official DVSA Theory Test Topics <span class="zh">· 官方考試15大主題對照</span>
+      </div>
+      <div class="dvsa-topic-grid">
+        <a class="dvsa-topic-row" href="#alertness">
+          <div class="dvsa-topic-num">1</div>
+          <div class="dvsa-topic-name">Alertness 專注力</div>
+          <div class="dvsa-topic-link">→ D1</div>
+        </a>
+        <a class="dvsa-topic-row" href="#attitude">
+          <div class="dvsa-topic-num">2</div>
+          <div class="dvsa-topic-name">Attitude 態度</div>
+          <div class="dvsa-topic-link">→ D2</div>
+        </a>
+        <a class="dvsa-topic-row" href="#vehicle">
+          <div class="dvsa-topic-num">3</div>
+          <div class="dvsa-topic-name">Safety &amp; Your Vehicle</div>
+          <div class="dvsa-topic-link">→ D3</div>
+        </a>
+        <a class="dvsa-topic-row" href="#weather">
+          <div class="dvsa-topic-num">4</div>
+          <div class="dvsa-topic-name">Safety Margins 安全距離</div>
+          <div class="dvsa-topic-link">→ D4</div>
+        </a>
+        <a class="dvsa-topic-row" href="#hazard">
+          <div class="dvsa-topic-num">5</div>
+          <div class="dvsa-topic-name">Hazard Awareness 危險意識</div>
+          <div class="dvsa-topic-link">→ D5</div>
+        </a>
+        <a class="dvsa-topic-row" href="#vulnerable">
+          <div class="dvsa-topic-num">6</div>
+          <div class="dvsa-topic-name">Vulnerable Road Users 弱勢使用者</div>
+          <div class="dvsa-topic-link">→ D6</div>
+        </a>
+        <a class="dvsa-topic-row" href="#others">
+          <div class="dvsa-topic-num">7</div>
+          <div class="dvsa-topic-name">Other Types of Vehicle 其他車輛</div>
+          <div class="dvsa-topic-link">→ D7</div>
+        </a>
+        <a class="dvsa-topic-row" href="#handling">
+          <div class="dvsa-topic-num">8</div>
+          <div class="dvsa-topic-name">Vehicle Handling 操車技術</div>
+          <div class="dvsa-topic-link">→ D8</div>
+        </a>
+        <a class="dvsa-topic-row" href="#motorway">
+          <div class="dvsa-topic-num">9</div>
+          <div class="dvsa-topic-name">Motorway Rules 高速公路</div>
+          <div class="dvsa-topic-link">→ D9</div>
+        </a>
+        <a class="dvsa-topic-row" href="#rules">
+          <div class="dvsa-topic-num">10</div>
+          <div class="dvsa-topic-name">Rules of the Road 道路守則</div>
+          <div class="dvsa-topic-link">→ D10</div>
+        </a>
+        <a class="dvsa-topic-row" href="#signs">
+          <div class="dvsa-topic-num">11</div>
+          <div class="dvsa-topic-name">Road &amp; Traffic Signs 路牌</div>
+          <div class="dvsa-topic-link">→ D11</div>
+        </a>
+        <a class="dvsa-topic-row" href="#documents">
+          <div class="dvsa-topic-num">12</div>
+          <div class="dvsa-topic-name">Documents 文件</div>
+          <div class="dvsa-topic-link">→ D12</div>
+        </a>
+        <a class="dvsa-topic-row" href="#accidents">
+          <div class="dvsa-topic-num">13</div>
+          <div class="dvsa-topic-name">Accidents 意外</div>
+          <div class="dvsa-topic-link">→ D13</div>
+        </a>
+        <a class="dvsa-topic-row" href="#loading">
+          <div class="dvsa-topic-num">14</div>
+          <div class="dvsa-topic-name">Vehicle Loading 車輛負載</div>
+          <div class="dvsa-topic-link">→ D14</div>
+        </a>
+        <a class="dvsa-topic-row" href="#environment">
+          <div class="dvsa-topic-num">15</div>
+          <div class="dvsa-topic-name">Environmental Issues 環境</div>
+          <div class="dvsa-topic-link">→ D15</div>
+        </a>
+      </div>
+    </div>
+    <p style="font-size: 12px; color: var(--gray-500); margin-bottom: 24px;">Each of the 15 official DVSA topics maps to a section (D1–D15) below · 廣東話：官方15大主題各對應下面一個章節（D1–D15）</p>
+
+    <div id="sections-root">
+      <div style="text-align:center;padding:80px 20px;color:#6b7280;font-size:15px;">
+        ⏳ Loading sections&hellip;
+        <br><span style="font-family:'Noto Sans HK',sans-serif;font-size:13px;margin-top:8px;display:block;">正在載入章節，請稍候…</span>
+      </div>
+    </div>
+
+    <footer>
+  <p><strong>UK Driving Theory Test Study Guide</strong> · A personal reference for self-study</p>
+  <p style="margin-top: 8px; font-size: 13px;"><strong>Key Sources:</strong> <a href="https://www.gov.uk/highway-code" style="color: var(--navy);">The Highway Code (GOV.UK)</a> · <a href="https://www.gov.uk/government/publications/know-your-traffic-signs" style="color: var(--navy);"><em>Know Your Traffic Signs</em> (DfT, 2019)</a> · <a href="https://www.gov.uk/theory-test" style="color: var(--navy);">DVSA Theory Test (GOV.UK)</a> · Road Traffic Act 1988</p>
+  <p style="margin-top: 8px; font-size: 12px; color: var(--gray-500);">Always verify against the current <strong>Highway Code</strong> and official DVSA materials — rules and fees are updated periodically. This guide was compiled in May 2026.</p>
+  <p style="margin-top: 12px; font-family: 'Noto Sans HK', sans-serif; color: var(--gray-500);">為個人溫習用途 · 請以官方Highway Code及DVSA最新資料為準 · 本指南按2026年5月資料編製</p>
+</footer>
+
+  </main>
+</div>
+
+<script>
+(function () {
+  var ORDER = [
+    'sections/d01-alertness.html',
+    'sections/d02-attitude.html',
+    'sections/d03-vehicle-safety.html',
+    'sections/d04-safety-margins.html',
+    'sections/d05-hazard-awareness.html',
+    'sections/d06-vulnerable-users.html',
+    'sections/d07-other-vehicles.html',
+    'sections/d08-vehicle-handling.html',
+    'sections/d09-motorway.html',
+    'sections/d10-rules-road.html',
+    'sections/d11-road-signs.html',
+    'sections/d12-documents.html',
+    'sections/d13-accidents.html',
+    'sections/d14-vehicle-loading.html',
+    'sections/d15-environment.html',
+    'sections/r01-speed-limits.html',
+    'sections/r02-stopping-distances.html',
+    'sections/r03-alcohol-drugs.html',
+    'sections/mock-test.html',
+    'sections/test-info.html'
+  ];
+
+  var root = document.getElementById('sections-root');
+
+  function initScrollSpy() {
+    var sectionEls = document.querySelectorAll('section[id]');
+    var navLinks   = document.querySelectorAll('.nav-item a');
+    function setActive() {
+      var cur = '', pos = window.scrollY + 100;
+      sectionEls.forEach(function (s) { if (s.offsetTop <= pos) cur = s.id; });
+      navLinks.forEach(function (l) {
+        l.classList.remove('active');
+        if (l.getAttribute('href') === '#' + cur) l.classList.add('active');
+      });
+    }
+    window.addEventListener('scroll', setActive, { passive: true });
+    setActive();
+    navLinks.forEach(function (l) {
+      l.addEventListener('click', function () {
+        if (window.innerWidth < 900)
+          document.querySelector('.sidebar').classList.remove('open');
+      });
+    });
+  }
+
+  Promise.all(ORDER.map(function (url) {
+    return fetch(url).then(function (r) {
+      if (!r.ok) throw new Error(url + ' -> HTTP ' + r.status);
+      return r.text();
+    });
+  })).then(function (htmls) {
+    root.innerHTML = htmls.join('\n');
+    initScrollSpy();
+    initQuiz();
+  }).catch(function () {
+    root.innerHTML =
+      '<div style="margin:40px;padding:28px;background:#fee2e2;border:2px solid #cc0000;' +
+      'border-radius:10px;font-family:system-ui,sans-serif;max-width:600px;">' +
+      '<strong style="font-size:17px;">&#9888; Cannot load sections via file://</strong>' +
+      '<p style="margin:14px 0 8px;">Browsers block local file access for security. ' +
+      'Run this command once in Terminal, then re-open the URL below:</p>' +
+      '<pre style="background:#0f2540;color:#fff;padding:14px;border-radius:6px;' +
+      'font-size:14px;overflow-x:auto;">python3 -m http.server 8888</pre>' +
+      '<p style="margin-top:10px;">Then open: ' +
+      '<a href="http://localhost:8888" style="color:#0066cc;font-weight:700;">' +
+      'http://localhost:8888</a></p>' +
+      '<p style="margin-top:14px;font-size:13px;color:#555;">' +
+      '&#x4e2d;&#x6587;&#xff1a;&#x5728; Terminal &#x57f7;&#x884c;&#x4e0a;&#x9762;&#x6307;&#x4ee4;&#xff0c;' +
+      '&#x7136;&#x5f8c;&#x55ae;&#x64ca; <a href="http://localhost:8888">http://localhost:8888</a></p>' +
+      '</div>';
+  });
+
+  /* ============ Mock Test Quiz Engine ============ */
+  var QUESTIONS = [
+    { q: "There are streetlights but no speed-limit signs. What is the speed limit?",
+      zh: "有街燈但無限速標示，速度限制係幾多？",
+      opts: ["20 mph", "30 mph", "40 mph", "National speed limit"], a: 1,
+      ex: "Streetlights (and no other signs) usually mean a 30 mph built-up area limit. · 有街燈通常代表市區30mph。" },
+    { q: "What is the typical overall stopping distance at 70 mph in dry conditions?",
+      zh: "乾燥路面時速70英里嘅總停車距離大約幾多？",
+      opts: ["53 metres", "73 metres", "96 metres", "120 metres"], a: 2,
+      ex: "At 70 mph: 21 m thinking + 75 m braking = 96 m total. · 70mph：21米反應 + 75米制動 = 96米。" },
+    { q: "How much can stopping distances increase on an icy road?",
+      zh: "結冰路面停車距離可增加幾多倍？",
+      opts: ["Double (x2)", "Three times (x3)", "Up to ten times (x10)", "No change"], a: 2,
+      ex: "Ice can multiply stopping distance by up to ten. Wet only doubles it. · 冰路可達十倍，濕路係雙倍。" },
+    { q: "What is the legal minimum tyre tread depth for a car?",
+      zh: "私家車輪胎合法最低胎紋深度係？",
+      opts: ["1.0 mm", "1.6 mm", "2.0 mm", "3.0 mm"], a: 1,
+      ex: "1.6 mm across the central three-quarters of the tread. · 中央3/4範圍要有1.6毫米。" },
+    { q: "In England, what is the legal blood alcohol limit?",
+      zh: "喺英格蘭，法定血液酒精上限係？",
+      opts: ["50 mg/100ml", "80 mg/100ml", "35 mg/100ml", "Zero"], a: 1,
+      ex: "England/Wales/NI = 80 mg. Scotland is stricter at 50 mg. · 英格蘭80mg，蘇格蘭較嚴50mg。" },
+    { q: "In the wet, the two-second rule should become at least…",
+      zh: "濕路時「兩秒法則」應延長至最少…",
+      opts: ["3 seconds", "4 seconds", "6 seconds", "10 seconds"], a: 1,
+      ex: "Double the gap to 4 seconds in the wet; up to 10x (20s) on ice. · 濕路加倍至4秒。" },
+    { q: "You should switch on your fog lights when visibility falls below…",
+      zh: "能見度低於幾多先應開霧燈？",
+      opts: ["50 metres", "100 metres", "200 metres", "300 metres"], a: 1,
+      ex: "Below 100 m. Turn them OFF once visibility improves. · 低於100米先開，回復要關。" },
+    { q: "A red 'X' on an overhead gantry above your lane means…",
+      zh: "頭頂龍門牌你條線顯示紅色X，代表…",
+      opts: ["Slow down only", "The lane is closed — do not use it", "Hard shoulder open", "End of speed limit"], a: 1,
+      ex: "Red X = lane closed; it may hide a stopped vehicle or accident. · 紅X = 該線封閉，絕不可入。" },
+    { q: "What is the pass mark for the hazard perception part?",
+      zh: "危險預判測試嘅合格分數係？",
+      opts: ["35 out of 50", "43 out of 50", "44 out of 75", "57 out of 75"], a: 2,
+      ex: "44 out of a possible 75 to pass hazard perception. · 危險預判：75分中要44分。" },
+    { q: "How many multiple-choice questions must you answer correctly to pass?",
+      zh: "多項選擇部分要答啱幾多題先合格？",
+      opts: ["40 of 50", "43 of 50", "45 of 50", "50 of 50"], a: 1,
+      ex: "43 out of 50 (86%). · 50題中43題（86%）。" },
+    { q: "In your first 2 years after passing, your licence is revoked if you reach…",
+      zh: "考到牌後頭兩年，扣夠幾多分駕照即被撤銷？",
+      opts: ["3 points", "6 points", "9 points", "12 points"], a: 1,
+      ex: "New Drivers Act: 6 points within 2 years = revoked, retake both tests. · 兩年內夠6分即撤銷。" },
+    { q: "How much room should you give a cyclist when overtaking at up to 30 mph?",
+      zh: "時速30英里內超越單車，應預留幾多闊度？",
+      opts: ["0.5 metre", "1 metre", "At least 1.5 metres", "3 metres"], a: 2,
+      ex: "At least 1.5 m at speeds up to 30 mph — more if faster. · 最少1.5米，快啲要更多。" },
+    { q: "When passing horse riders you should…",
+      zh: "超越騎馬人士時應該…",
+      opts: ["Sound your horn to warn them", "Pass wide and slow, max 10 mph", "Rev the engine", "Pass as close as possible quickly"], a: 1,
+      ex: "Wide and slow (10 mph or under); never sound the horn or rev. · 闊而慢（≤10mph），唔好響喇叭。" },
+    { q: "A triangular road sign usually gives what type of message?",
+      zh: "三角形路牌通常代表咩訊息？",
+      opts: ["An order you must obey", "A warning", "Information/directions", "A prohibition"], a: 1,
+      ex: "Triangle = warning; circle = order; rectangle = information. · 三角=警告，圓形=命令，長方=資訊。" },
+    { q: "You must report an accident to the police within…",
+      zh: "發生意外後最遲幾耐內要向警方報告？",
+      opts: ["1 hour", "24 hours", "48 hours", "7 days"], a: 1,
+      ex: "Report within 24 hours; produce documents within 7 days. · 24小時內報告，7日內出示文件。" },
+    { q: "What is the correct CPR ratio of chest compressions to rescue breaths?",
+      zh: "心肺復甦法（CPR）胸壓與人工呼吸嘅比例係？",
+      opts: ["15 : 2", "30 : 2", "5 : 1", "20 : 2"], a: 1,
+      ex: "30 compressions to 2 breaths, pushing 100–120/min. · 30下按壓比2次呼吸。" },
+    { q: "A rear-facing baby seat may be fitted in a front seat only if…",
+      zh: "後向式嬰兒座椅可放前座，前提係…",
+      opts: ["The seat is pushed fully back", "The active airbag is switched off", "An adult sits beside it", "Never in any circumstances"], a: 1,
+      ex: "Never with an ACTIVE airbag — deactivate it first, or use the rear seats. · 前座氣袋必須關閉。" },
+    { q: "The national speed limit for a car on a single carriageway is…",
+      zh: "私家車喺單向行車路嘅國家速度限制係？",
+      opts: ["50 mph", "60 mph", "70 mph", "40 mph"], a: 1,
+      ex: "Single carriageway 60; dual carriageway and motorway 70. · 單線60，雙線及高速70。" },
+    { q: "When braking hard in a car with ABS you should…",
+      zh: "有ABS嘅車緊急煞車時應該…",
+      opts: ["Pump the brake pedal", "Press firmly and keep the pressure on", "Brake then release fully", "Use the handbrake"], a: 1,
+      ex: "Firm, continuous pressure — do not pump. ABS lets you steer while braking. · 用力持續踩，唔好泵。" },
+    { q: "'Coasting' (rolling with the clutch down or in neutral) is discouraged because it…",
+      zh: "「滑行」（踩住離合器或空檔）唔建議，因為佢…",
+      opts: ["Saves too much fuel", "Reduces control and engine braking", "Overheats the engine", "Is illegal everywhere"], a: 1,
+      ex: "It removes engine braking and reduces control, especially downhill. · 失去引擎制動同控制力，落斜尤其危險。" },
+    { q: "If your car starts to aquaplane in heavy rain you should…",
+      zh: "大雨中發生水滑（aquaplaning）時應該…",
+      opts: ["Brake hard immediately", "Ease off the accelerator and hold the wheel steady", "Steer sharply to regain grip", "Accelerate through it"], a: 1,
+      ex: "Ease off the gas, keep steering straight, wait for grip — don't brake hard. · 輕放油門、軚盤保持直，唔好急煞。" },
+    { q: "At a roundabout you must normally give way to traffic coming from…",
+      zh: "迴旋處通常要讓邊個方向嘅車先行？",
+      opts: ["The left", "The right", "Straight ahead", "Behind you"], a: 1,
+      ex: "Give way to traffic already on the roundabout — from your right. · 讓右邊（已在迴旋處）嘅車。" },
+    { q: "A steady amber traffic light means…",
+      zh: "穩定（不閃）嘅黃燈代表…",
+      opts: ["Speed up to clear the junction", "Stop, unless you are too close to stop safely", "Give way then go", "Same as green"], a: 1,
+      ex: "Amber = stop, unless stopping could cause a collision. · 黃燈=停，除非太近煞停會危險。" },
+    { q: "The recovery position is used for a casualty who is…",
+      zh: "復原臥式（recovery position）用於邊種傷者？",
+      opts: ["Conscious and bleeding", "Unconscious but breathing", "Not breathing", "In shock"], a: 1,
+      ex: "Unconscious but breathing — keeps the airway open. · 昏迷但有呼吸，保持氣道暢通。" },
+    { q: "The maximum speed for a car towing a trailer on a motorway is…",
+      zh: "私家車拖拖車喺高速公路嘅最高速度係？",
+      opts: ["50 mph", "60 mph", "70 mph", "40 mph"], a: 1,
+      ex: "60 mph when towing on a motorway or dual carriageway. · 拖車喺高速/雙線最高60mph。" },
+    { q: "Zig-zag white lines on the approach to a zebra crossing mean…",
+      zh: "斑馬線前後嘅白色鋸齒線代表…",
+      opts: ["Parking allowed briefly", "No stopping or overtaking", "Bus lane", "Give way to the right"], a: 1,
+      ex: "No parking, no stopping and no overtaking on the zig-zags. · 唔准停車、唔准超車。" },
+    { q: "Roughly how quickly does the body remove alcohol?",
+      zh: "身體大約幾快代謝酒精？",
+      opts: ["About 1 unit per hour, only time helps", "Coffee speeds it up", "A cold shower clears it", "Eating removes it fast"], a: 0,
+      ex: "About 1 unit/hour and only time works — coffee, food, water don't. · 約每小時1單位，只有時間有用。" },
+    { q: "A car normally needs its first MOT test when it is…",
+      zh: "私家車第一次要做MOT年檢係喺…",
+      opts: ["1 year old", "3 years old", "5 years old", "10 years old"], a: 1,
+      ex: "First MOT at 3 years old, then every year. · 出廠3年後首檢，之後每年一次。" },
+    { q: "The penalty for using a hand-held mobile phone while driving is…",
+      zh: "駕駛時手持手機嘅罰則係…",
+      opts: ["3 points + £100", "6 points + £200", "Verbal warning", "£1,000 only"], a: 1,
+      ex: "6 penalty points and a £200 fine — even when stopped in traffic. · 6分加£200，停紅燈都犯法。" },
+    { q: "The motorway hard shoulder should be used for…",
+      zh: "高速公路硬路肩只可以用嚟…",
+      opts: ["A quick rest", "Genuine emergencies / breakdowns only", "Making phone calls", "Overtaking slow traffic"], a: 1,
+      ex: "Emergencies and breakdowns only — never for rests or calls. · 只限真正緊急/壞車。" }
+  ];
+
+  function shuffle(arr) {
+    var a = arr.slice();
+    for (var i = a.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = a[i]; a[i] = a[j]; a[j] = t;
+    }
+    return a;
+  }
+
+  var QUIZ_LEN = 20, PASS = 17, LETTERS = ['A', 'B', 'C', 'D'];
+
+  function initQuiz() {
+    var mount = document.getElementById('quiz-app');
+    if (!mount) return;
+    var state = null;
+
+    function esc(s) {
+      return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function renderStart() {
+      mount.innerHTML =
+        '<div class="quiz-card quiz-start">' +
+          '<p>Ready to test yourself? You’ll get <strong>' + QUIZ_LEN + ' random questions</strong>. ' +
+          'Answer each one to see instant feedback, then review anything you missed at the end.</p>' +
+          '<p style="font-family:\'Noto Sans HK\',sans-serif;font-size:14px;">準備好未？隨機 ' + QUIZ_LEN + ' 題，答完即睇解釋，最後可重溫錯題。</p>' +
+          '<button class="quiz-btn" data-act="start">▶ Start Mock Test · 開始</button>' +
+        '</div>';
+    }
+
+    function startQuiz() {
+      state = { qs: shuffle(QUESTIONS).slice(0, QUIZ_LEN).map(function (q) {
+        var order = shuffle([0, 1, 2, 3]);
+        return { q: q.q, zh: q.zh, ex: q.ex,
+                 opts: order.map(function (i) { return q.opts[i]; }),
+                 a: order.indexOf(q.a), picked: null };
+      }), i: 0, score: 0 };
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      var idx = state.i, item = state.qs[idx];
+      var pct = Math.round((idx) / QUIZ_LEN * 100);
+      var optsHtml = item.opts.map(function (opt, k) {
+        return '<li class="quiz-option" data-opt="' + k + '">' +
+                 '<span class="quiz-letter">' + LETTERS[k] + '</span>' +
+                 '<span>' + esc(opt) + '</span>' +
+               '</li>';
+      }).join('');
+      mount.innerHTML =
+        '<div class="quiz-card">' +
+          '<div class="quiz-progress-wrap">' +
+            '<div class="quiz-progress-top"><span>Question ' + (idx + 1) + ' of ' + QUIZ_LEN + '</span>' +
+              '<span>Score: ' + state.score + '</span></div>' +
+            '<div class="quiz-bar"><div class="quiz-bar-fill" style="width:' + pct + '%"></div></div>' +
+          '</div>' +
+          '<div class="quiz-qnum">Q' + (idx + 1) + '</div>' +
+          '<div class="quiz-question">' + esc(item.q) + '</div>' +
+          '<div class="quiz-question-zh">' + esc(item.zh) + '</div>' +
+          '<ul class="quiz-options">' + optsHtml + '</ul>' +
+          '<div class="quiz-feedback"></div>' +
+        '</div>';
+    }
+
+    function answer(k) {
+      var item = state.qs[state.i];
+      if (item.picked !== null) return;
+      item.picked = k;
+      if (k === item.a) state.score++;
+      var opts = mount.querySelectorAll('.quiz-option');
+      opts.forEach(function (el, n) {
+        el.classList.add('disabled');
+        if (n === item.a) { el.classList.add('correct');
+          el.insertAdjacentHTML('beforeend', '<span class="quiz-mark">✓</span>'); }
+        else if (n === k) { el.classList.add('wrong');
+          el.insertAdjacentHTML('beforeend', '<span class="quiz-mark">✗</span>'); }
+      });
+      var last = state.i === QUIZ_LEN - 1;
+      mount.querySelector('.quiz-feedback').innerHTML =
+        '<div class="quiz-explain">' +
+          '<strong>' + (k === item.a ? '✓ Correct!' : '✗ Not quite.') + '</strong> ' +
+          esc(item.ex) +
+        '</div>' +
+        '<div class="quiz-actions">' +
+          '<button class="quiz-btn" data-act="next">' +
+            (last ? 'See Results · 睇成績' : 'Next Question · 下一題') + ' →</button>' +
+        '</div>';
+    }
+
+    function next() {
+      if (state.i < QUIZ_LEN - 1) { state.i++; renderQuestion(); }
+      else renderResult();
+    }
+
+    function renderResult() {
+      var passed = state.score >= PASS;
+      var wrong = state.qs.filter(function (q) { return q.picked !== q.a; });
+      var reviewHtml = '';
+      if (wrong.length) {
+        reviewHtml = '<div class="quiz-review"><h4>Review · 重溫錯題 (' + wrong.length + ')</h4>' +
+          wrong.map(function (q) {
+            return '<div class="quiz-review-item">' +
+              '<div class="rq">' + esc(q.q) + '</div>' +
+              '<div class="ra">Your answer: <span class="no">' +
+                (q.picked === null ? '—' : esc(q.opts[q.picked])) + '</span><br>' +
+              'Correct: <span class="ok">' + esc(q.opts[q.a]) + '</span></div>' +
+            '</div>';
+          }).join('') + '</div>';
+      } else {
+        reviewHtml = '<div class="quiz-review"><p style="color:var(--green);font-weight:700;">' +
+          '🎉 Perfect — every question correct! 全部答對！</p></div>';
+      }
+      mount.innerHTML =
+        '<div class="quiz-card quiz-result">' +
+          '<div class="quiz-score-ring ' + (passed ? 'pass' : 'fail') + '">' +
+            '<div class="quiz-score-num">' + state.score + '</div>' +
+            '<div class="quiz-score-of">/ ' + QUIZ_LEN + '</div>' +
+          '</div>' +
+          '<div class="quiz-verdict ' + (passed ? 'pass' : 'fail') + '">' +
+            (passed ? '✓ PASS' : '✗ Not yet') + '</div>' +
+          '<div class="quiz-verdict-zh">' +
+            (passed ? '合格！達到 86% 水準。' : '未到 17/20（86%），再試过！') +
+          '</div>' +
+          reviewHtml +
+          '<div style="margin-top:20px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">' +
+            '<button class="quiz-btn" data-act="start">↺ Try Again · 再考</button>' +
+          '</div>' +
+        '</div>';
+    }
+
+    mount.addEventListener('click', function (e) {
+      var act = e.target.closest('[data-act]');
+      if (act) {
+        var a = act.getAttribute('data-act');
+        if (a === 'start') startQuiz();
+        else if (a === 'next') next();
+        return;
+      }
+      var opt = e.target.closest('.quiz-option');
+      if (opt && !opt.classList.contains('disabled'))
+        answer(parseInt(opt.getAttribute('data-opt'), 10));
+    });
+
+    renderStart();
+  }
+}());
+</script>
+
+</body>
+</html>

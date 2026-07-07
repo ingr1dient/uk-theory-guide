@@ -1,0 +1,5 @@
+# Netlify configuration — static site, no build step.
+# The site is plain HTML served from the repository root.
+[build]
+  publish = "."
+  command = ""
